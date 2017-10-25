@@ -4,11 +4,11 @@ import Book from './Book'
 import PropTypes from 'prop-types'
 const _ = require('lodash');
 
-class MyReads extends Component {
+class BookShelf extends Component {
 
   static propTypes = {
     books: PropTypes.array,
-    onChangeBookShelf: PropTypes.func.isRequired,
+    onUpdateBookShelf: PropTypes.func.isRequired,
   }
 
   render() {
@@ -30,7 +30,7 @@ class MyReads extends Component {
                         <Book
                           book={book}
                           shelf={shelf}
-                          onChangeBookShelf={this.props.onChangeBookShelf}/>
+                          onUpdateBookShelf={this.props.onUpdateBookShelf}/>
                       </li>
                     ))}
                   </ol>
@@ -64,4 +64,4 @@ class MyReads extends Component {
   }
 }
 
-export default MyReads
+export default BookShelf

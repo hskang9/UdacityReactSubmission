@@ -9,7 +9,7 @@ class SearchPage extends Component {
 
   static propTypes = {
     myBooks: PropTypes.array,
-    onChangeBookShelf: PropTypes.func.isRequired,
+    onUpdateBookShelf: PropTypes.func.isRequired,
   }
 
   state = {
@@ -77,7 +77,7 @@ class SearchPage extends Component {
                 <Book
                   book={book}
                   shelf={this.getShelf(book)}
-                  onChangeBookShelf={this.props.onChangeBookShelf}/>
+                  onUpdateBookShelf={this.props.onUpdateBookShelf}/>
               </li>
             ))}
           </ol>

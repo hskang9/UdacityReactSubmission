@@ -14,11 +14,11 @@ class MyBooks extends Component {
       }),
       shelf: PropTypes.string,
     }),
-    onChangeBookShelf: PropTypes.func.isRequired
+    onUpdateBookShelf: PropTypes.func.isRequired
   }
 
   handleChange = (event) => {
-    this.props.onChangeBookShelf(this.props.book, event.target.value)
+    this.props.onUpdateBookShelf(this.props.book, event.target.value)
   }
 
   render() {
